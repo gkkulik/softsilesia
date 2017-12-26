@@ -45,7 +45,7 @@ function setupModule(){
 }
 
 function checkInstallPrerequisites(){
-  if [ ! -f "$SETUPDATAFILE_REMOTE" ]; then
+  if [ "x$SETUPDATAFILE_REMOTE" != "x" ] && [ ! -f "$SETUPDATAFILE_REMOTE" ]; then
     echo "Unable to find $SETUPDATAFILE_REMOTE file. Quitting installation"
     exit
   fi
